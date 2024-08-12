@@ -25,7 +25,7 @@ export enum FormFieldType{
 
  
 const PatientForm = () => {
-  const router = useRouter
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
   const form = useForm<z.infer<typeof UserFormValidation>>({
@@ -42,11 +42,11 @@ const PatientForm = () => {
     setIsLoading(true);
 
     try {
-      const useData = { name, email, phone };
+      // const userData = { name, email, phone };
 
-      const user = await createUser(userData);
+      // const user = await createUser(userData);
 
-      if(user)
+      // if(user) router.push(`/patients/${user.$id}/register`)
 
     } catch(error) {
        console.log(error);
